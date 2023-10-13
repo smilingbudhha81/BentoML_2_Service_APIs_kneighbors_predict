@@ -1,0 +1,50 @@
+service: service:service
+name: kneighbors
+version: pxc4323jzoxvushh
+bentoml_version: 1.0.25
+creation_time: '2023-10-13T13:22:23.485643+00:00'
+labels:
+  owner: bentoml-team
+  project: gallery
+models:
+- tag: kneighbors:bojuxmljzgxoishh
+  module: bentoml.sklearn
+  creation_time: '2023-10-13T13:04:29.863477+00:00'
+runners:
+- name: kneighbors
+  runnable_type: SklearnRunnable
+  embedded: false
+  models:
+  - kneighbors:bojuxmljzgxoishh
+  resource_config: null
+apis:
+- name: predict
+  input_type: NumpyNdarray
+  output_type: NumpyNdarray
+docker:
+  distro: debian
+  python_version: '3.10'
+  cuda_version: null
+  env: null
+  system_packages: null
+  setup_script: null
+  base_image: null
+  dockerfile_template: null
+python:
+  requirements_txt: null
+  packages:
+  - scikit-learn
+  - pandas
+  lock_packages: true
+  index_url: null
+  no_index: null
+  trusted_host: null
+  find_links: null
+  extra_index_url: null
+  pip_args: null
+  wheels: null
+conda:
+  environment_yml: null
+  channels: null
+  dependencies: null
+  pip: null
